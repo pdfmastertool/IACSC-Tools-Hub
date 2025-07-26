@@ -1074,6 +1074,36 @@
                     <p>Generate secure random numbers and passwords</p>
                     <a href="Random Password Generator Tool.html" class="tool-button">Use Tool</a>
                 </div>
+              <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="7e1a72c6-55a3-48a0-8b68-23f897cca5c0" />
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="contact-submit-btn">
+                            <span>Send Message</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M15.854.146a.5.5 0 0 1 .11.54L13.026 8.74a.5.5 0 0 1-.708.233L8.5 7.5l-1.473 1.473a.5.5 0 0 1-.854-.353V6.5L1.146 1.854a.5.5 0 0 1 .708-.708L7 6.293l1.473-1.473a.5.5 0 0 1 .854.353V6.5l5.027 1.973a.5.5 0 0 1 .233.708L15.854.146z"/>
+                            </svg>
+                        </button>
+                    </form>
             </div>
         </div>
     </section>
@@ -1108,7 +1138,28 @@
             </div>
         </div>
     </footer>
-    
+    <!-- Tool Modal -->
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Tool Name</h2>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Tool content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message" id="toastMessage">Success!</span>
+        </div>
+    </div>
+	<script src="./watsapp.js" id="my-custom-widget"></script>
+    <script src="script.js"></script>
     <script>
         // Mobile menu toggle functionality
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
